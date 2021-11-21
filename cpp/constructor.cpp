@@ -1,12 +1,12 @@
-//WITHOUT USING A CONSTRUCTOR
- 
-#include <iostream>
+/* Without Using Constructor */
+
+#include<iostream>
 using namespace std;
  
 class Person
 {
   int age, salary;
-  char name[50];
+  string name;
  public:
   void getData ();
   void putData ();
@@ -41,7 +41,8 @@ int main (){
  
  
  
-// with default constructor
+ 
+/* with default constructor */
  
  
 #include<iostream>
@@ -50,23 +51,23 @@ using namespace std;
 class Person{
     int age;
     float salary;
-    char* name;
+    string name;
     
 public:
     void putData();
     
     Person(){
         age = 18;
-        salary = 125000.12500;
+        salary = 5000000;
         name = "rizwan";
     }
     
 };
  
 void Person::putData(){
-    cout<<"Name of Person is : "<<name;
-    cout<<"Age of Person is : "<<age;
-    cout<<"salary of Person is :"<<salary;
+    cout<<"Name of Person is : "<<name<<endl;
+    cout<<"Age of Person is : "<<age<<endl;
+    cout<<"salary of Person is :"<<salary<<endl;
     
 }
  
@@ -76,22 +77,24 @@ int main(){
     return 0;
 }
  
- 
+/* with parametarized constructor */
+
 #include<iostream>
 using namespace std;
 class Person
 {
-    public:
     int age;
     float salary;
-    char* name;
+    string name;
+public:
+    
     Person()
     {
-        age=29;
-        salary=30;
-        name="pavan";
+        age=18;
+        salary=5000000;
+        name="rizwan";
     }
-    Person(int a,float b,char* c)
+    Person(int a,float b,string c)
     {
         age=a;
         salary=b;
@@ -103,33 +106,23 @@ class Person
         salary=b;
         name="vrsec";
     }
-    // void getData();
     void putData();
 };
- 
-// void Person::getData()
-// {
-//     cout<<"Enter age";
-//     cin>>age;
-//     cout<<"Enter Salary";
-//     cin>>salary;
-//     cout<<"Enter name of the person";
-//     cin>>name;
-// }
+
  
 void Person::putData()
 {
-    cout<<"\nDetails of the candidate are \n";
-    cout<<"\nName of the person is:"<<name<<"\n";
-    cout<<"\nThe age of the person is: "<<this->age;
-    cout<<"\nThe Salary of the person is: "<<salary;
+    cout<<"<-- Details of the candidate are -->"<<endl;
+    cout<<endl;
+    cout<<"Name of the person is:"<<name<<endl;
+    cout<<"The age of the person is: "<<age<<endl;
+    cout<<"The Salary of the person is: "<<salary<<endl;
 }
 int main()
 {
-    // Person p; // default constructor with no args will be invoked
-    Person p(29,30.3,"pavan"); //  constructor with three args will be invoked
-    // Person p(20,203.3,"for (int i = 0; i < count; i++) {
-        /* code */
+    Person p; /* default constructor with no args will be invoked */
+    Person p(20,500000,"ravi"); /*  constructor with three args will be invoked */
+    Person p(19,400000,); /* name will be the default one */
     p.putData();
     return 0;
 }
