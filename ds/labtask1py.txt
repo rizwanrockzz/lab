@@ -78,7 +78,7 @@ for j in range(len(Task)):
         
         
 
-        ###Task-3
+###Task-3
 
 # Rithick gets a lottery ticket and checks each number in the list to see whether he has won the lottery or 
 # not. Since there are many numbers,he finds it tedious to check each ticket number manually. So he decides 
