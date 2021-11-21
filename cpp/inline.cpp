@@ -1,3 +1,5 @@
+/* Inline functions in c++ */
+
 #include <iostream>
 using namespace std;
 
