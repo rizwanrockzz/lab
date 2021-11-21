@@ -1,2 +1,2 @@
 # lab
-DS and CPP lab programs by rizwan.
+DS and CPP lab programs by #RIZWAN#.
