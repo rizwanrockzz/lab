@@ -1,2 +1,2 @@
-# lab
-DS and CPP lab programs by #RIZWAN#.😎😎😎
+# Lab Repo
+DS, CPP lab programs and Web Development lab websites by #RIZWAN#.😎😎😎
