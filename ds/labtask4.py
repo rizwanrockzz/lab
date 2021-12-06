@@ -50,10 +50,18 @@ def mergeSort(arr, l, r):
 		mergeSort(arr, m+1, r)
 		merge(arr, l, m, r)
 
-arr = [12, 11, 13, 5, 6, 7]
+arr = ["Mar", "May", "Nov", "Aug", "Apr", "Jan", "Dec", "Jul", "Feb", "Jun", "Oct", "Sep"]
 n = len(arr)
 print(arr)
 
 mergeSort(arr, 0, n-1)
 print(arr)
+
+arr2 = [12,45,10,33,55,50]
+n2 = len(arr2)
+print(arr2)
+
+mergeSort(arr2, 0, n2-1)
+print(arr2)
+
 
