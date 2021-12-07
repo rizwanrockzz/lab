@@ -76,3 +76,49 @@ int main(){
     
     return 0;
 }
+
+
+// task2
+
+#include <stdio.h>
+#include<stdlib.h>
+char arr[50] ;
+int tos = 0;
+void push(char x){
+    if (tos>=5){
+        printf("Stack Overflow");
+    {
+    else{
+        tos++;
+        arr[tos] = x;
+    }
+}
+
+int pop(){
+    if(tos<=0){
+        printf("Stack empty");
+    }
+    else{
+        int y = arr[tos];
+        tos--;
+        return y;
+    }
+}
+
+
+int main()
+{
+   char str[20];
+   gets(str);
+   printf("%s", str);
+//   printf("%ld",strlen(str));/
+    for(int i=0;i<strlen(str);i++){
+        push(str[i]);
+    }
+    
+    for(int i=0;i<strlen(str);i++){
+        printf("%s",arr[i]);
+    }
+   
+   return 0;
+}
