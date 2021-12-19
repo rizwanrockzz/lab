@@ -222,6 +222,103 @@ int main()
 
 
 
+// Q5.	Create a class named Employee with the following details
+//  Data members:
+// (a)	name (b) address (c) age (d) gender
+// Methods :
+// 	(a ) Display () to show the employee details
+// Create another class FullTimeEmployee that inherits the Employee class :
+// 	Data members :
+// (a)	Salary	Designation
+// Method :
+// (a)	Display () to show the salary and designation along  with other employee details.
+// Create another class PartTimeEmployee that inherits the Employee class :
+// 	Data members :
+// (a)	Workinghours	rateperhour
+// Methods :
+// (a)	caluculatepay() to caluculate the amount payable
+// (b)	display() to show the amount payable along with the employee details.
+// Create objects of these classes and call their methods .use appropriate constructors.
+
+
+#include <iostream>
+using namespace std;
+
+class Employee{
+public:
+    string name,address,gender;
+    int age;
+    Employee(string a,string b,string c,int d){
+        name = a;
+        address = b;
+        gender = c;
+        age = d;
+    }
+    // void display();
+};
+
+
+class FullTimeEmployee:public Employee{
+public:
+    int salary;
+    string designation;
+    FullTimeEmployee(string a,string b,string c,int d,int e,string f):Employee(a,b,c,d){
+        salary = e;
+        designation = f;
+    }
+    void displayFullEmp();
+};
+
+void FullTimeEmployee::displayFullEmp(){
+    cout<<"The salary of the Employee is : "<<salary<<endl;
+    cout<<"The designation of the Employee is : "<<designation<<endl;
+}
+
+class PartTimeEmployee:public Employee{
+public:
+    int hours,rate;
+    PartTimeEmployee(string a,string b,string c,int d,int e,int f):Employee(a,b,c,d){
+        hours = e;
+        rate = f;
+    }
+    float caluculatepay(int h,int r);
+    void display();
+};
+
+float PartTimeEmployee::caluculatepay(int h,int r){
+    return h*r;
+}
+
+void PartTimeEmployee::display(){
+    cout<<"The name of the Employee is : "<<name<<endl;
+    cout<<"The address of the Employee is : "<<address<<endl;
+    cout<<"The gender of the Employee is : "<<gender<<endl;
+    cout<<"The age of the Employee is : "<<age<<endl;
+    cout<<"No of hours worked by Employee is : "<<hours<<endl;
+    cout<<"Pay for each hour of the Employee is : "<<rate<<endl;
+    cout<<"The part time salary of the Employee is : "<<caluculatepay(hours,rate)<<endl;
+}
+
+int main()
+{
+    // name address gender age hours rate
+    PartTimeEmployee pte("john","near vja","Male",21,30,300);
+    // name address gender age salary designation
+    FullTimeEmployee fte("john","near vja","Male",21,100000,"Manager");
+    pte.display();
+    fte.displayFullEmp();
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
 //Q8
 #include <iostream>
 using namespace std;
