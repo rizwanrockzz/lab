@@ -317,6 +317,68 @@ int main()
 
 
 
+// Q6.	Create a class Employer with company_name and city. Create a parameterised method companyDetail
+// (String, String) to set the values to the two variables.  Create a showCompanyDetails() method to display 
+// the company information.
+// Create a subclass Employee with eno,ename,esal. Create a parameterized constructor to set the values to 
+// these variables. create a showEmployee() to display the information.
+// Create a main method to test the classes
+
+#include <iostream>
+using namespace std;
+
+class Employer{
+public:
+    string cname,city;
+    void CompanyDetails(string a,string b);
+    void ShowCompanyDetails();
+};
+
+void Employer::CompanyDetails(string a,string b){
+    cname = a;
+    city = b;
+}
+
+void Employer::ShowCompanyDetails(){
+    cout<<"The company name is : "<<cname<<endl;
+    cout<<"The city where comoany is located is : "<<city<<endl;
+}
+
+class Employee:public Employer{
+public:
+    int eno,salary;
+    string ename;
+    Employee(int a,string b,int c){
+        eno = a;
+        ename = b;
+        salary = c;
+    }
+    void ShowEmployee();
+};
+
+void Employee::ShowEmployee(){
+    cout<<"The Employee number is : "<<eno<<endl;
+    cout<<"The Employee name is : "<<ename<<endl;
+    cout<<"The Employee salary is : "<<salary<<endl;
+}
+
+int main()
+{
+    Employee e(1,"johndoe",100000);
+    e.ShowEmployee();
+    Employer er;
+    
+    er.CompanyDetails("abc inc","vja");
+    er.ShowCompanyDetails();
+    
+
+    return 0;
+}
+
+
+
+
+
 
 
 
