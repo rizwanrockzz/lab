@@ -290,6 +290,7 @@ float PartTimeEmployee::caluculatepay(int h,int r){
 }
 
 void PartTimeEmployee::display(){
+    cout<<"---Employee Details---\n"<<endl;
     cout<<"The name of the Employee is : "<<name<<endl;
     cout<<"The address of the Employee is : "<<address<<endl;
     cout<<"The gender of the Employee is : "<<gender<<endl;
