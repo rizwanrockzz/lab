@@ -1,5 +1,10 @@
 // Menu driven program
 
+// We have discussed stack operations called push () and pop () in the class. Also illustrated with examples. 
+// Design and implement menu driven C program with 4 operations. 
+// (1) Add element to stack (2) Delete element from stack (3) Traverse elements and (4) Exit.
+// Write all possible examples supported by relevant test cases.   
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -82,7 +87,20 @@ int main(){
 
 
 
-// task2
+// Task-2
+// Design and implement C program to check a string is palindrome or not using a stack. A stack is LAST IN FIRST OUT (LIFO) data structure. 
+// The element which is inserted last, is accessed first. Insertion and deletion of elements happens only at top of the Stack. 
+// The sequence of exit of elements from a stack is reverse of the sequence of their entry in stack.
+// Sequence of Entry.
+// A --> B --> C -- > D --> E
+// Sequence of Exit.
+// E --> D --> C --> B --> A
+// Algorithm to check palindrome string using stack 
+// Find the length of the input string using strlen function and store it in a integer variable "length".
+// Using a for loop, traverse input string from index 0 to length-1 and push all characters in stack.
+// Remove (Pop) characters from stack one by one using a for loop and compare it with corresponding character of input string 
+// from beginning(traverse from index 0 to length-1). If we found a mismatch the input string is not a palindrome string otherwise palindrome string.
+
 
 #include<stdio.h>
 #include<stdlib.h>
