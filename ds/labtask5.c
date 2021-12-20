@@ -130,11 +130,6 @@ int pop(){
     }
 }
 
-void display(){
-    for(int i=1;i<=tos;i++){
-        printf("%d\n",arr[i]);
-    }
-}
 
 int main(){
     int check,key;
