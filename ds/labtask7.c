@@ -45,7 +45,7 @@ int main()
                 tos--; //pop
             }
             else{
-                tos--;
+                tos--; //pop
             }
         }
         else if(word[i]==']'){
