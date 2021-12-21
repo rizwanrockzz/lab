@@ -26,7 +26,7 @@ void push(char x){
 
 int main()
 {
-    int ans=1;
+    int ans=0;
     char word[50];
     printf("Enter an expression : ");
     scanf("%s",word);
