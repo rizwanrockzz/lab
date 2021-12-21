@@ -86,28 +86,22 @@ int main()
 
 // Postfix Evaluation
 
-int tos = 0;
+int tos = -1;
 int arr[50] ;
 
 void push(int x){
-    if (tos>=7){
-        printf("Stack Overflow");
-    }
-    else{
-        tos++;
-        arr[tos] = x;
-    }
+
+    tos++;
+    arr[tos] = x;
+
 }
 
 int pop(){
-    if(tos<=0){
-        printf("Stack empty");
-    }
-    else{
-        int y = arr[tos];
-        tos--;
-        return y;
-    }
+
+    int y = arr[tos];
+    tos--;
+    return y;
+
 }
 
 
@@ -119,34 +113,43 @@ int main()
     scanf("%s", word);
     int length = strlen(word);
     
-    // printf("%s",word);
     for(int i=0;i<length;i++){
-        // if(word[i] == "+" || word[i] == "-" || word[i] == "*" ||word[i] == "/" ){
-        if(word[i]-'0' >=0 || word[i]-'0' <=9 ){
-            printf("%d",word[i]);
-            push(word[i]);
+        
+        if(word[i]>='0' || word[i] <='9' && word[i]-'0'>0 ){
+            printf("%c ",word[i]);
+            printf("%d  \n",word[i]-'0');
+            push(word[i]-'0');
         }
+        
         else{
-            val2 = pop()-'0';
-            val1 = pop()-'0';
-            printf("%d  %d",val1,val2);
+            for(int i=1;i<length;i++){
+                printf("%d ",arr[i]);
+            }
+            
+            val2 = pop();
+            val1 = pop();
+            printf("\n\nval1 val2 %d  %d\n\n",val1,val2);
             x = val1;
             y = val2;
             switch(word[i]){
                 
                 case '+':
+                    printf("+ %d\n\n",x+y);
                     push(x+y);
                     break;
                     
                 case '-':
+                    printf("- %d\n\n",x-y);
                     push(x-y);
                     break;
                     
                 case '*':
+                    printf("* %d\n\n",x*y);
                     push(x*y);
                     break;
                 
                 case '/':
+                    printf("/ %d\n\n",x/y);
                     push(x/y);
                     break;
             }
@@ -154,7 +157,12 @@ int main()
         
         
     }
-    
+    printf("\n\n\n");
+    printf("Elements : ");
+    for(int i=1;i<length;i++){
+        printf("%d ",arr[i]);
+    }
+    printf("\n\n");
     printf("ans is : %d\n",arr[0]);
 
 // 53+82-*
