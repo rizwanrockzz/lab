@@ -81,151 +81,60 @@ int main(){
 
 
 
+# # 1   -Push the element x into the stack.
+# # 2    -Delete the element present at the top of the stack.
+# # 3    -Print the maximum element in the stack.
 
-    //   scanf("%d",&key);
-        
-    //     switch(key){
-    //         case 1:
-    //             printf("Enter string : ");
-    //             scanf("%s",word);
-                
-    //             int length = strlen(word);
-                
-    //             for(int i=0;i<length;i++){
-    //                 push(word[i]);
-    //             }
+# tos = -1
+# arr = []
+
+# def push(x):
+#     global tos
+#     tos+=1 
+#     arr[tos] = x 
     
-    //             for(int i=0;i<length;i++){
-    //                 char a = pop();
-    //                 if (a != word[i]){
-    //                     check = 0;
-    //                     break;
-    //                 }
-    //             }
-                
-    //             if (check==0){
-    //                 printf("%s is not a palindrome\n",word);
-    //             }
-    //             else{
-    //                 printf("%s is a palindrome\n",word);
-    //             }
-    //             break;
-    //         case 2:
-    //             if(tos!=0){
-    //                 printf("Poped element is : %d\n",pop());
-    //             }
-    //             else{
-    //                 printf("Stack is empty\n");
-    //             }
-    //             break;
+# def pop():
+#     global tos
+#     tos-=1 
 
-    //         case 2:
-    //             exit(0);
-                
-    //     }
-    //     count++;
+# operations  = []
+   
+# n = int(input("No of operations : "))
 
+# for j in range(n):
+#     operations.append(input())
+# print("arr : ",arr)  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Task 2
-
-#include <stdio.h>
-#include<string.h>
-
-// Postfix Evaluation
-
-int tos = 0;
-int arr[50] ;
-
-void push(int x){
-    if (tos>=7){
-        printf("Stack Overflow");
-    }
-    else{
-        tos++;
-        arr[tos] = x;
-    }
-}
-
-int pop(){
-    if(tos<=0){
-        printf("Stack empty");
-    }
-    else{
-        int y = arr[tos];
-        tos--;
-        return y;
-    }
-}
-
-
-int main()
-{
-    char word[50];
-    int val1,val2,ans,x,y;
+# print(operations)
+# for i in range(n):
+#     print("i : ",i)
+#     if operations[i][0]=='1':
+#         b,c = operations[i].split()
+#         push(c)
+#         print("arr : ",arr)
     
-    scanf("%s", word);
-    int length = strlen(word);
-    
-    for(int i=0;i<length;i++){
-        printf("%c ",word[i]);
-        if(word[i]>='0' || word[i] <='9' ){
-            printf("%d  \n",word[i]-'0');
-            push(word[i]-'0');
-        }
-        else{
-            val2 = pop();
-            val1 = pop();
-            printf("%d  %d",val1,val2);
-            x = val1;
-            y = val2;
-            switch(word[i]){
-                
-                case '+':
-                    printf("+ %d",x+y);
-                    push(x+y);
-                    break;
-                    
-                case '-':
-                    printf("- %d",x-y);
-                    push(x-y);
-                    break;
-                    
-                case '*':
-                    printf("* %d",x*y);
-                    push(x*y);
-                    break;
-                
-                case '/':
-                    printf("/ %d",x/y);
-                    push(x/y);
-                    break;
-            }
-        }
+#     elif operations[i][0]=='2':
+#         # tos-=1 
+#         pop()
         
+#     elif operations[i][0]=='3':
+#         op3 = max(arr)
         
-    }
-    printf("Elements : ");
-    for(int i=1;i<=length;i++){
-        printf("%d ",arr[i]);
-    }
-    printf("ans is : %d\n",arr[0]);
+# print(op3)
 
-// 53+82-*
-    return 0;
-}
+# # a = ['1 97', '2', '1 20', '2', '1 26', '1 20', '2', '3', '1 91', '3']
+# # print(a[0][0])
+# # b,c=a[0].split()
+# # print(b,c,sep="   ")
+
+print(" "-"0")
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
