@@ -41,8 +41,8 @@ int main()
             printf("(  arr[tos] : %c\n\n",x);
             
             if(x =='(' && tos!=-1 ){
-                ans =1; //pop
-                tos--;
+                ans =1; 
+                tos--; //pop
             }
             else{
                 tos--;
@@ -54,10 +54,10 @@ int main()
             
             if(x =='[' && tos!=-1 ){
                 ans=1 ;
-                tos--;
+                tos--; //pop
             }
             else{
-                tos--;
+                tos--; //pop
             }
 
         }
@@ -77,5 +77,4 @@ int main()
 
     return 0;
 }
-
 
