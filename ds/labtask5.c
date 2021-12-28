@@ -8,7 +8,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int tos = 0;
+int tos = -1;
 int arr[50] ;
 
 void push(int x){
@@ -22,7 +22,7 @@ void push(int x){
 }
 
 int pop(){
-    if(tos<=0){
+    if(tos==-1){
         printf("Stack empty");
     }
     else{
@@ -33,7 +33,7 @@ int pop(){
 }
 
 void display(){
-    for(int i=1;i<=tos;i++){
+    for(int i=0;i<=tos;i++){
         printf("%d\n",arr[i]);
     }
 }
@@ -60,7 +60,7 @@ int main(){
                 }
                 break;
             case 2:
-                if(tos!=0){
+                if(tos!=-1){
                     printf("Poped element is : %d\n",pop());
                 }
                 else{
@@ -79,8 +79,6 @@ int main(){
     }
 
     
-    return 0;
-}
 
 
 
