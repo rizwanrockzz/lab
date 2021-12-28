@@ -34,6 +34,7 @@ void delete(){
         temp = front;
         printf("Deleted Element is : %d\n",front->data);
         printf("Freeing the memory of %d Address : %p\n\n",front->data,temp);
+        printf("Next is : %p \n\n",front->next);
         front = front->next;
         temp->next = NULL;
         free(temp);
@@ -45,7 +46,7 @@ void display()
 {
     while (front != NULL) {
         // printf("tos --> data :: %d\n\n", front->data);
-        printf(" %d --> ", front->data);
+        printf("%d --> ", front->data);
         front = front->next;
     }
     printf("NULL\n\n");
@@ -58,7 +59,7 @@ int main()
     delete();
     insert(30);
     insert(40);
-    display();
+    delete();
     delete();
     insert(50);
     insert(60);
