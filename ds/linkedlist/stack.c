@@ -11,7 +11,7 @@ struct node{
 
 void push(int val){
     new = (struct node*)malloc(sizeof(struct node*));
-    printf("Address : %p\n",new);
+    printf("Address of %d is : %p\n",val,new);
     new->data = val;
     new->next = NULL;
     if(tos == NULL){
@@ -37,9 +37,11 @@ void pop(){
 void display()
 {
     while (tos != NULL) {
-        printf("tos --> data :: %d\n\n", tos->data);
+        // printf("tos --> data :: %d\n\n", tos->data);
+        printf(" %d --> ", tos->data);
         tos = tos->next;
     }
+    printf("NULL\n\n");
 }
 
 int main()
