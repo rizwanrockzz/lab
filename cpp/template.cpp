@@ -33,6 +33,15 @@ template<typename T>
         
     }
 
+
+// or
+
+template<typename T>
+    void bubblesort(T arr,int n){
+        sort(arr, arr + n);
+    }
+
+
 int main()
 {
     int a1[6] = {6,2,8,1,9,3};
