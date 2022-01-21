@@ -62,3 +62,51 @@ int main()
     return 0;
 }
 
+
+
+
+
+
+// sum 
+#include <iostream>
+using namespace std;
+
+template<typename T1,typename T2>
+void sum_of_two(T1 a,T2 b){
+    cout<<"Sum of two is : "<<a+b<<endl;
+}
+    
+
+int main()
+{
+    sum_of_two(7.3,8.2);
+    
+    return 0;
+}
+
+
+
+
+
+
+//swap
+#include <iostream>
+using namespace std;
+
+template <typename t1,typename t2>
+    void swapit(t1 a,t2 b){
+        t1 temp = *a;
+        *a = *b;
+        *b = temp;
+        
+    }
+
+int main()
+{
+    int a = 10.2;
+    int b = 98;
+    cout<<"a : "<<a<<"  b : "<<b<<endl;
+    swapit(&a,&b);
+    cout<<"a : "<<a<<"  b : "<<b<<endl;
+    return 0;
+}
