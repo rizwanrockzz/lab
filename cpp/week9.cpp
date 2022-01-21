@@ -48,7 +48,7 @@ int main(){
 
 
 
-
+//program 2
 
 #include <iostream>
 using namespace std;
@@ -58,19 +58,28 @@ class Employee{
 };
 
 class Boss:public Employee{
-    
+public:
+    cout<<"The salary of the boss is : 100000\n\n";
 };
 
 class Weekly:public Employee{
-    
+public:
+    cout<<"The salary for week is : 5000\n\n";
 };
 
 class Piecewish:public Employee{
-    
+public:
+    int pieces;
+    cout<<"Enter the no of pieces produced : ";
+    cin>>pieces;
+    cout<<"Your salary for "<<pieces<<" pieces is : "<<pieces*20;
 };
 
 class Hourly:public Employee{
-    
+    int hours;
+    cout<<"Enter the no of hours worked : ";
+    cin>>hours;
+    cout<<"Your salary for "<<hours<<" hours is : "<<hours*100;
 };
 
 int main(){
