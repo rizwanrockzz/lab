@@ -45,3 +45,36 @@ int main(){
 
 	return 0;
 }
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class Employee{
+    
+};
+
+class Boss:public Employee{
+    
+};
+
+class Weekly:public Employee{
+    
+};
+
+class Piecewish:public Employee{
+    
+};
+
+class Hourly:public Employee{
+    
+};
+
+int main(){
+	
+
+	return 0;
+}
