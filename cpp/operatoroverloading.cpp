@@ -1,3 +1,47 @@
+// PROGRAM 2
+
+#include <iostream>
+using namespace std;
+// overload == operator
+
+class Load{
+public:
+    int a;
+    
+    void get(){
+        cout<<"Enter a value : ";
+        cin>>a;
+    }
+    
+    void operator ==(Load l){
+        if(a==l.a){
+            cout<<"Object 1 and Object 2 both are equal";
+        }
+        else{
+            cout<<"Object 1 and Object 2 both are not equal";
+        }
+    }
+    
+};
+
+int main()
+{
+    Load l1,l2;
+    l1.get();
+    l2.get();
+    l1==l2;
+        
+    return 0;
+}
+
+
+
+
+
+
+
+// PROGRAM 3
+
 #include <iostream>
 using namespace std;
 // overload + operator
