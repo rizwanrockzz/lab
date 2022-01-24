@@ -9,11 +9,12 @@
 #include<stdlib.h>
 
 int tos = -1;
-int arr[50] ;
+int arr[50],max=4;
 
 void push(int x){
-    if (tos>5){
-        printf("Stack Overflow");
+    if (tos>=max){
+        printf("Stack Overflow\n\n");
+        return;
     }
     else{
         tos++;
@@ -23,7 +24,7 @@ void push(int x){
 
 int pop(){
     if(tos==-1){
-        printf("Stack empty");
+        printf("Stack empty\n\n");
     }
     else{
         int y = arr[tos];
@@ -77,7 +78,7 @@ int main(){
             
         }
     }
-
+}
     
 
 
