@@ -230,28 +230,20 @@ void display()
 #include<stdlib.h>
 #include<string.h>
 
-int tos = 0;
+int tos = -1;
 char arr[50] ;
 
 void push(char x){
-    if (tos>5){
-        printf("Stack Overflow");
-    }
-    else{
-        tos++;
-        arr[tos] = x;
-    }
+
+    tos++;
+    arr[tos] = x;
 }
 
 int pop(){
-    if(tos<=0){
-        printf("Stack empty");
-    }
-    else{
-        char y = arr[tos];
-        tos--;
-        return y;
-    }
+
+    char y = arr[tos];
+    tos--;
+    return y;
 }
 
 
