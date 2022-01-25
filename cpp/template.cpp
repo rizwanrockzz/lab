@@ -110,3 +110,96 @@ int main()
     cout<<"a : "<<a<<"  b : "<<b<<endl;
     return 0;
 }
+
+
+
+
+
+
+// class template linear search
+
+#include<iostream>
+using namespace std;
+
+template<class T1>
+class Test
+{
+		T1 *arr,n,key,check = 0,ans;
+	public:
+		Test(T1 *x, T1 y,T1 z)
+		{
+			arr = x;
+			n = y;
+			key = z;
+		}
+		void show()
+		{
+		    for(int i=0;i<n;i++){
+		        cout<<"arr["<<i<<"] is : "<<arr[i]<<" "<<endl;
+		    }
+		    
+		    for(int i=0;i<n;i++){
+                if(arr[i]==key){
+                    ans = i;
+                    check = 1;
+                    break;
+                }
+            }
+            
+            if(check){
+                cout<<key<<" found at index : "<<ans<<endl;
+            }
+            else{
+                cout<<"Element not found"<<endl;
+            }
+		}
+};
+
+int main()
+{
+    
+    
+    int arr[] = {4,2,6,1,9};
+    int n = sizeof(arr)/sizeof(int);
+    int key;
+    cout<<"Enter an element to search : ";
+    cin>>key;
+	Test <int>t(arr, n,key);
+	t.show();
+	
+	return 0;
+}
+
+
+
+
+
+
+
+// for addition
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+
+template <class T>
+
+    void addit(T t1,T t2)
+    {
+    	cout << "Addition is : "<< t1+t2 << "\n";
+    }
+    
+    void addit(int t1,int t2)
+    {
+    	cout << "Addition for only int is : "<< t1+t2 << "\n";
+    }
+
+int main()
+{
+    addit(10,12);
+    addit(11.5,3);
+
+	return 0;
+}
+
