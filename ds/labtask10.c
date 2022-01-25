@@ -53,6 +53,100 @@ int main()
  
     return 0;
 }
+// OUTPUT
+
+// Enter an element : 10
+// Do you want to enter an other node (1/0) : 1
+// Enter an element : 20
+// Do you want to enter an other node (1/0) : 1
+// Enter an element : 30
+// Do you want to enter an other node (1/0) : 1
+// Enter an element : 40
+// Do you want to enter an other node (1/0) : 1
+// Enter an element : 50
+// Do you want to enter an other node (1/0) : 0
+// NULL 10 20 30 40 50 NULL
+
+
+
+
+
+
+
+
+
+
+
+// TASK - 2
+
+
+#include <stdio.h>
+#include <stdlib.h>
+// task 2
+int flag,e;
+ 
+struct node{
+    struct node*prev;
+    int data;
+    struct node*next;
+}*new,*head,*temp,*helper;
+ 
+// double linked list
+ 
+void dll(){
+
+    do{
+    printf("Enter an element : ");
+    scanf("%d",&e);
+    new = (struct node*)malloc(sizeof(struct node*));
+    new->prev = NULL;
+    new->data = e;
+    new->next = NULL;
+    if(head == NULL){
+        head = new;
+        temp = new;
+    }
+    else{
+        new->next = head;
+        head->prev = new;
+        head = head->prev;
+    }
+    printf("Do you want to enter an other node (1/0) : ");
+    scanf("%d",&flag);
+    }while(flag==1);
+}
+
+void display(){
+    helper = head;
+    printf("NULL ");
+    while(helper!=NULL){
+        printf("%d ",helper->data);
+        helper = helper->next;
+    }
+    printf("NULL");
+}
+ 
+int main()
+{
+    dll();
+    display();
+ 
+    return 0;
+}
+
+// OUTPUT
+
+// Enter an element : 10
+// Do you want to enter an other node (1/0) : 1
+// Enter an element : 20
+// Do you want to enter an other node (1/0) : 1
+// Enter an element : 30
+// Do you want to enter an other node (1/0) : 1
+// Enter an element : 40
+// Do you want to enter an other node (1/0) : 1
+// Enter an element : 50
+// Do you want to enter an other node (1/0) : 0
+// NULL 50 40 30 20 10 NULL
 
 
 
