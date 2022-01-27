@@ -153,3 +153,78 @@ int main()
 return 0;
 }
 
+
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+class A
+{
+    public:
+    int a;
+};
+
+class B:virtual public A{
+    public:
+    int b;
+};
+
+class C:virtual public A{
+    public:
+    int c;
+};
+
+class D: public B,public C{
+    public:
+    int d;
+};
+
+int main()
+{
+    D obj;
+    obj.a=25;             //statement 1
+    obj.a=100;           //statement 2
+
+    obj.b=50;
+    obj.c=75;
+    obj.d=150;
+    
+    cout<< "\n A : "<< obj.a;
+    cout<< "\n B : "<< obj.b;
+    cout<< "\n C : "<< obj.c;
+    cout<< "\n D : "<< obj.d;
+}
+
+
+
+// pure virtual function
+
+#include<iostream>
+using namespace std;
+
+class Base
+{
+int x;
+public:
+	virtual void fun() = 0;
+	int getX() { return x; }
+};
+
+// This class inherits from Base and implements fun()
+class Derived: public Base
+{
+	int y;
+public:
+	void fun() { cout << "fun() called"; }
+};
+
+int main(void)
+{
+	Derived d;
+	d.fun();
+	return 0;
+}
