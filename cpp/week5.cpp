@@ -1,3 +1,5 @@
+// PROLEM 1
+
 #include<iostream>
 using namespace std;
 class Test
@@ -29,35 +31,39 @@ int main()
 
 
 
+// PROGRAM 2
 
-
-#include<iostream>
+#include <iostream>
 using namespace std;
-class Test
-{
-    public:
-	int a; 
-	void get()
-	{
-		cin>>a;	
-	}
-		
-	
-	void operator ==(Test t2)
-	{
-		if(a==t2.a) cout<<"both objs are same";
-		else cout<<"both objs are not same";
-	}
+// overload == operator
+
+class Load{
+public:
+    int a;
+    
+    void get(){
+        cout<<"Enter a value : ";
+        cin>>a;
+    }
+    
+    void operator ==(Load l){
+        if(a==l.a){
+            cout<<"Object 1 and Object 2 both are equal";
+        }
+        else{
+            cout<<"Object 1 and Object 2 both are not equal";
+        }
+    }
+    
 };
+
 int main()
 {
-    Test t1,t2;
-    cout<<"enter the value for t1 obj : ";
-    t1.get();
-    cout<<"enter the value for t2 obj : ";
-    t2.get();
-    
-    t1==t2;
+    Load l1,l2;
+    l1.get();
+    l2.get();
+    l1==l2;
+        
     return 0;
 }
 
@@ -67,4 +73,105 @@ int main()
 
 
 
+// PROGRAM 3
 
+#include <iostream>
+using namespace std;
+// overload + operator
+
+class Load{
+public:
+    int a;
+    
+    void get(){
+        cout<<"Enter a value : ";
+        cin>>a;
+    }
+    
+    void operator +(Load l){
+        cout<<"Sum is : "<<a+l.a<<endl;
+    }
+    
+    void operator -(Load l){
+        cout<<"Subtraction is : "<<a-l.a<<endl;
+    }
+    
+    void operator *(Load l){
+        cout<<"Product is : "<<a*l.a<<endl;
+    }
+    
+    void operator /(Load l){
+        cout<<"Division is : "<<a/l.a<<endl;
+    }
+    
+    void operator %(Load l){
+        cout<<"Remainder is : "<<a%l.a<<endl;
+    }
+    
+    void operator >(Load l){
+        if(a>l.a){
+            cout<<"Object 1 is greater than Object 2";
+        }
+        else{
+            cout<<"Object 2 is greater than Object 1";
+        }
+    }
+    
+    void operator <(Load l){
+
+        if(a<l.a){
+            cout<<"Object 1 is less than Object 2";
+        }
+        else{
+            cout<<"Object 2 is less than Object 1";
+        }
+    }
+    
+    void operator ==(Load l){
+        if(a==l.a){
+            cout<<"Object 1 and Object 2 both are equal";
+        }
+        else{
+            cout<<"Object 1 and Object 2 both are not equal";
+        }
+    }
+    
+};
+
+int main()
+{
+    Load l1,l2;
+    l1.get();
+    l2.get();
+    char c;
+    cout<<"Enter the operator which you want to overload : ";
+    cin>>c;
+    switch (c){
+        case '+':
+            l1+l2;
+            break;
+        case '-':
+            l1-l2;
+            break;
+        case '*':
+            l1*l2;
+            break;
+        case '/':
+            l1/l2;
+            break;
+        case '>':
+            l1>l2;
+            break;
+        case '<':
+            l1<l2;
+            break;
+        case '=':
+            l1==l2;
+            break;
+        default:
+            cout<<"Enter a valid operator"<<endl;
+            break;
+    }
+        
+    return 0;
+}
