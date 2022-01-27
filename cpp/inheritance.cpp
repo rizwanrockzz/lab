@@ -112,6 +112,62 @@ int main()
 
 
 
+
+
+#include <iostream>
+using namespace std;
+// Q3
+
+class Person
+{
+public:
+    string firstname,lastname;
+    void setP(string a,string b){
+        firstname = a;
+        lastname = b;
+    }
+};
+
+class Employee:public Person
+{
+public:
+    int eno,esal;
+    string edept;
+
+    void setE(int a,string b,int c){
+        eno = a;
+        edept = b;
+        esal = c;
+    }
+    void display();
+
+};
+
+void Employee::display(){
+    cout<<"Person's First Name is : "<<firstname<<endl;
+    cout<<"Person's Last Name is : "<<lastname<<endl;
+    cout<<"Employee number is : "<<eno<<endl;
+    cout<<"Employee department is : "<<edept<<endl;
+    cout<<"Employee salary is : "<<esal<<endl;
+}
+
+int main()
+{
+    Person p;
+    p.setP("hii","rizwan");
+    Employee e;
+    e.setE(1,"marketing",100000);
+    e.display();
+    
+    return 0;
+}
+
+
+
+
+// OR
+
+
 #include <iostream>
 using namespace std;
 // Q3
