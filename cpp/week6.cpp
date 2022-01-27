@@ -112,85 +112,44 @@ int main()
 
 
 
+// problem 3
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#include <iostream>
-#include <cstring>
-#include <string>
-#include <stack>
+#include<iostream>
+#include<stack>
 using namespace std;
 
 int main()
 {
-    int n;
-    cout<<"Enter the no of operations : ";
-    cin>>n;
-    int j=0;
-    stack<int> st;
-	char op[20];
-	int arr[4];
-	int max[n];
-	for(int i=0;i<=n;i++){
-	    cin.getline(op,20);
-
-    	char * token;
-    
-    	token = strtok (op," ");
-    	while (token != NULL)
-        {
-    		string abc(token);
-    		int a = stoi(abc);
-    		arr[j] = a;
-    		token = strtok (NULL, " ");
-    		j+=1;
-        }
-      
-      
-      
-    //   for(int i=0;i<j;i++){
-    //       cout<<arr[i]<<"    ";
-    //   }
-    
-    if(arr[0]==1){
-        st.push(arr[1]);
-        max[i]=arr[1];
+    stack<int> s;
+    int x,c,maxi = -1;
+    cout<<"Menu\n1.push\n2.pop\n3.Maximum\n4.exit"<<endl;
+    while(1)
+    {
+        cout<<"Enter the choice : ";
+        cin>>c;
+       switch(c)
+       {
+        case 1:
+            cin>>x;
+            s.push(x);
+            cout<<endl;
+            break;
+        case 2:
+            s.pop();
+            break;
+        case 3:
+            for (std::stack<int> dump = s; !dump.empty(); dump.pop()){
+                maxi = max(maxi,dump.top());
+            }
+            cout<<maxi<<endl;
+            break;
+        case 4:
+            exit(0);
+            
+        default:
+            cout<<"invalid choice";
+       }
     }
-    else if(arr[0]==2){
-        st.pop();
-    }
-    
-    else if(arr[0]==3){
-        cout<<max(maxele)<<endl;
-    }
-      
-    for(int i=0;i<j;i++){
-      arr[i] = 0;
-    }
-      
-
-      
-      j=0;
-      
-      cout<<endl;
-	}
-	
-	return 0;
+return 0;
 }
+
