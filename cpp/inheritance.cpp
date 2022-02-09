@@ -165,6 +165,107 @@ int main()
 
 
 
+// Task 7
+
+// 7.	Create a base class called person with SSN  and name as data types with getdata and display as 
+// member functions. Derive a  new class called student with rollno, branch,mark1,mark2,mark3 as 
+// datamembers and getdata and display  as member functions and finally derive a new  class called grade 
+// from student class in that calculate the average for marks and display the  grade for the  student 
+// a. A grade >=90%
+// b. B grade>=80%
+// c. C grade>=70%
+// d. Less than 70% fail.  
+
+#include<iostream>
+using namespace std;
+
+class person
+{
+    string SSN;
+    string name;
+    public:
+    void getdata()
+    {
+        cout<<"Enter the SSN : ";
+        cin>>SSN;
+        cout<<"Enter the name : ";
+        cin>>name;
+    }
+    void display()
+    {
+        cout<<"The SSN is "<<SSN<<endl;
+        cout<<"The name is"<<name<<endl;
+    }
+    
+};
+class student:public person
+{
+public:
+    int roll_no;
+    string branch;
+    float mark1,mark2,mark3;
+    void setdata()
+    {
+        cout<<"Enter the roll no and branch : ";
+        cin>>roll_no>>branch;
+        cout<<"Enter the marks in three subjects : ";
+        cin>>mark1>>mark2>>mark3;
+    }
+    void show()
+    {
+        cout<<"The roll no and branch of a student : "<<roll_no<<" , "<<branch<<endl;
+        cout<<"The marks "<<mark1<<" , "<<mark2<<" , "<<mark3<<endl;
+    }
+};
+class grade:public student 
+{
+public:
+    float grade;
+    void showGrade()
+    {
+        grade=(mark1+mark2+mark3)/3;
+        if (grade>=90)
+        {
+            cout<<"A grade"<<endl;
+        }
+        else if(grade>=80)
+        {
+            cout<<"B grade"<<endl;
+        }
+        else if(grade>=70)
+        {
+            cout<<"C grade"<<endl;
+        }
+        else
+        {
+            cout<<"fail"<<endl;
+        }
+    }
+};
+int main()
+{
+    grade g;
+    g.getdata();
+    g.setdata();
+    g.display();
+    g.show();
+    g.showGrade();
+    return 0;
+}
+
+// Task 7 Output
+
+// The SSN is exam
+// The name isrizwan
+// The roll no and branch of a student : 99 , IT
+// The marks 90 , 89 , 99
+// A grade
+
+
+
+
+
+
 // OR
 
 
