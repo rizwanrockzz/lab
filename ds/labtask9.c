@@ -174,3 +174,128 @@ int main()
 //  5x^2 + -1x^1 + -3x^0 
 
 
+
+
+
+
+
+
+
+
+
+// Task 4
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+void linkedListTraversal(struct node *new)
+{
+    while (new != NULL)
+    {
+        printf("Element: %d\n", new->data);
+        new = new->next;
+    }
+}
+
+// Case 1
+struct node *insertAtFirst(struct node *head, int data)
+{
+    struct node *new = (struct node *)malloc(sizeof(struct node));
+    new->data = data;
+
+    new->next = head;
+    return new;
+}
+
+// Case 2
+struct node *insertAtIndex(struct node *head, int data, int index)
+{
+    struct node *new = (struct node *)malloc(sizeof(struct node));
+    struct node *p = head;
+    int i = 0;
+
+    while (i != index - 1)
+    {
+        p = p->next;
+        i++;
+    }
+    new->data = data;
+    new->next = p->next;
+    p->next = new;
+    return head;
+}
+
+// Case 3
+struct node *insertAtEnd(struct node *head, int data)
+{
+    struct node *new = (struct node *)malloc(sizeof(struct node));
+    new->data = data;
+    struct node *p = head;
+
+    while (p->next != NULL)
+    {
+        p = p->next;
+    }
+    p->next = new;
+    new->next = NULL;
+    return head;
+}
+
+// Case 4
+struct node *insertAfternode(struct node *head, struct node *prevnode, int data)
+{
+    struct node *new = (struct node *)malloc(sizeof(struct node));
+    new->data = data;
+
+    new->next = prevnode->next;
+    prevnode->next = new;
+
+    return head;
+}
+
+int main()
+{
+    struct node *head;
+    struct node *second;
+    struct node *third;
+    struct node *fourth;
+
+    // Allocate memory for nodes in the linked list in Heap
+    head = (struct node *)malloc(sizeof(struct node));
+    second = (struct node *)malloc(sizeof(struct node));
+    third = (struct node *)malloc(sizeof(struct node));
+    fourth = (struct node *)malloc(sizeof(struct node));
+
+    // Link first and second nodes
+    head->data = 7;
+    head->next = second;
+
+    // Link second and third nodes
+    second->data = 11;
+    second->next = third;
+
+    // Link third and fourth nodes
+    third->data = 41;
+    third->next = fourth;
+
+    // Terminate the list at the third node
+    fourth->data = 66;
+    fourth->next = NULL;
+
+    printf("Linked list before insertion\n");
+    linkedListTraversal(head);
+    head = insertAtFirst(head, 56);
+    head = insertAtIndex(head, 34, 2);
+    head = insertAtEnd(head, 99);
+    head = insertAfternode(head, third, 45);
+    printf("\nLinked list after insertion\n");
+    linkedListTraversal(head);
+
+    return 0;
+}
