@@ -1,17 +1,14 @@
-// Task 1
+// Task-1
 
-// Design, develop and execute a program in C/Python to implement Binary Search tree where each node consist of integers. The program should support following functions and show different testcases.
-
-// a. Create a Binary Search tree
-
-// b. Insert a new node 
-
-// c. Delete a node if it is found, otherwise display appropriate message 
-
-// d. Display the nodes of Binary Search tree
-
-// e Validate Binary Search tree
-
+/*
+Design, develop and execute a program in C/Python to implement Binary Search tree where each node 
+consist of integers. The program should support following functions and show different testcases.
+a. Create a Binary Search tree
+b. Insert a new node 
+c. Delete a node if it is found, otherwise display appropriate message 
+d. Display the nodes of Binary Search tree
+e Validate Binary Search tree
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
