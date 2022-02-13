@@ -1,5 +1,19 @@
 // HOME ASSIGNMENT 3
 
+/*
+
+12	Check if a binary tree is symmetric or not
+Given a binary tree, write an efficient algorithm to check if it has a symmetric structure or not, i.e., left and right subtree mirror each other.
+For example, the following are some binary trees that have a symmetric structure:
+ 
+ 
+The tree has a symmetric structure if the left and right subtree mirror each other. Two trees mirror each other if all the following conditions are satisfied:
+•	Both trees are empty, or both are non-empty.
+•	The left subtree is the mirror of the right subtree.
+•	The right subtree is the mirror of the left subtree.
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
