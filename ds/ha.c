@@ -78,7 +78,7 @@ int main()
 
 // HOME ASSIGNMENT 4
 
-    /*
+/*
 
 Sort the following elements using Heap Sort
 [34, 12, 38, 41, 93, 96, 88, 47, 4, 51, 7, 7, 92, 61, 66]
