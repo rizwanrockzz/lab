@@ -182,6 +182,106 @@ int main()
 
 
 
+// Task-3
+/*
+Reverse a linked list: Given pointer to the head node of a linked list, the task is to reverse the linked list. 
+We need to reverse the list by changing the links between nodes.
+Input: Head of following linked list 
+1->2->3->4->NULL 
+Output: Linked list should be changed to, 
+4->3->2->1->NULL
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+void reverse(struct node **head)
+{
+    struct node *prev = NULL;
+    struct node *current = *head;
+    struct node *nextptr = NULL;
+    while (current != NULL)
+    {
+        // Store next
+        nextptr = current->next;
+
+        // Reverse current node's pointer
+        current->next = prev;
+
+        // Move pointers one position ahead.
+        prev = current;
+        current = nextptr;
+    }
+    *head = prev;
+}
+
+/* Function to push a node */
+void push(struct node **head, int new_data)
+{
+    struct node *new = (struct node *)malloc(sizeof(struct node));
+    new->data = new_data;
+    new->next = (*head);
+    *head = new;
+}
+
+/* Function to print linked list */
+void printList(struct node *head)
+{
+    struct node *temp = head;
+    while (temp != NULL)
+    {
+        printf("%d ", temp->data);
+        temp = temp->next;
+    }
+}
+
+struct node *insertAtEnd(struct node *head, int data)
+{
+    struct node *new = (struct node *)malloc(sizeof(struct node));
+    new->data = data;
+    struct node *p = head;
+
+    while (p->next != NULL)
+    {
+        p = p->next;
+    }
+    p->next = new;
+    new->next = NULL;
+    return head;
+}
+
+int main()
+{
+    struct node *head = NULL;
+
+    push(&head, 20);
+    push(&head, 4);
+    push(&head, 15);
+    push(&head, 85);
+
+    printf("Given linked list\n");
+    printList(head);
+    reverse(&head);
+    printf("\nReversed Linked list \n");
+    printList(head);
+    getchar();
+}
+
+
+
+
+
+
+
+
+
+
 
 // Task 4
 
