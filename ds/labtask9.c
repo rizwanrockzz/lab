@@ -180,6 +180,135 @@ int main()
 
 
 
+// Task-2
+/*
+A polynomial p(x) is the expression in variable x which is in the form (axn
+ + bxn-1 + …. + jx+ k), where a, b, 
+c …., k fall in the category of real numbers and 'n' is non negative integer, 
+which is called the degree of polynomial. Create a function that takes two sorted linked lists 
+and merges them into a single sorted linked list. Your goal is to return a new linked list that 
+contains the nodes from two lists in sorted order. 
+You may assume the sort order is ascending. For example:
+// list1
+1 -> 4 -> 10 -> 11
+// list2
+-1 -> 2 -> 3 -> 6
+// merged list
+-1 -> 1 -> 2 -> 3 -> 4 -> 6 -> 10 -> 11
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<assert.h>
+
+struct Node
+{
+	int data;
+	struct Node* next;
+};
+
+
+void MoveNode(struct Node** destRef, struct Node** sourceRef)
+{
+	struct Node* newNode = *sourceRef;
+	assert(newNode != NULL);
+
+	*sourceRef = newNode->next;
+
+	newNode->next = *destRef;
+
+	*destRef = newNode;
+}
+
+struct Node* SortedMerge(struct Node* a, struct Node* b)
+{
+	struct Node dummy;
+
+	struct Node* tail = &dummy;
+	
+	dummy.next = NULL;
+	while (1)
+	{
+		if (a == NULL)
+		{
+			tail->next = b;
+			break;
+		}
+		else if (b == NULL)
+		{
+			tail->next = a;
+			break;
+		}
+		if (a->data <= b->data)
+			MoveNode(&(tail->next), &a);
+		else
+			MoveNode(&(tail->next), &b);
+
+		tail = tail->next;
+	}
+	return(dummy.next);
+}
+
+void push(struct Node** head_ref, int new_data)
+{
+	struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
+
+	new_node->data = new_data;
+
+	new_node->next = (*head_ref);
+
+	(*head_ref) = new_node;
+}
+
+void printList(struct Node *node)
+{
+	while (node!=NULL)
+	{
+		printf("%d -> ", node->data);
+		node = node->next;
+	}
+	printf("NULL");
+}
+
+int main()
+{
+	struct Node* res = NULL;
+	struct Node* a = NULL;
+	struct Node* b = NULL;
+
+	push(&a, 11);
+	push(&a, 10);
+	push(&a, 4);
+	push(&a, 1);
+
+	push(&b, 6);
+	push(&b, 3);
+	push(&b, 2);
+	push(&b, 1);
+
+	res = SortedMerge(a, b);
+
+	printf("Merged Linked List is: \n\n");
+	printList(res);
+
+	return 0;
+}
+
+/*
+OUTPUT :
+
+Merged Linked List is: 
+
+1 -> 1 -> 2 -> 3 -> 4 -> 6 -> 10 -> 11 -> NULL
+
+*/
+
+
+
+
+
+
+
 
 
 // Task-3
