@@ -75,14 +75,12 @@ int main()
 
 
 
-
-
-// TASK - 2
+// TASK 2
 
 
 #include <stdio.h>
 #include <stdlib.h>
-// task 2
+ 
 int flag,e;
  
 struct node{
@@ -107,9 +105,9 @@ void dll(){
         temp = new;
     }
     else{
-        new->next = head;
-        head->prev = new;
-        head = head->prev;
+        new->prev = head;
+        head->next = new;
+        head = head->next;
     }
     printf("Do you want to enter an other node (1/0) : ");
     scanf("%d",&flag);
@@ -117,7 +115,7 @@ void dll(){
 }
 
 void display(){
-    helper = head;
+    helper = temp;
     printf("NULL ");
     while(helper!=NULL){
         printf("%d ",helper->data);
@@ -125,28 +123,27 @@ void display(){
     }
     printf("NULL");
 }
+
+void insertHead(struct node*p,int val){
+    struct node*new = (struct node*)malloc(sizeof(struct node));
+    new->prev = NULL;
+    new->data = val;
+    new->next = p;
+    p->prev = new;
+    
+    temp = new;
+}
  
 int main()
 {
     dll();
     display();
+    insertHead(temp,50);
+    printf("\n");
+    display();
  
     return 0;
 }
-
-// OUTPUT
-
-// Enter an element : 10
-// Do you want to enter an other node (1/0) : 1
-// Enter an element : 20
-// Do you want to enter an other node (1/0) : 1
-// Enter an element : 30
-// Do you want to enter an other node (1/0) : 1
-// Enter an element : 40
-// Do you want to enter an other node (1/0) : 1
-// Enter an element : 50
-// Do you want to enter an other node (1/0) : 0
-// NULL 50 40 30 20 10 NULL
 
 
 
