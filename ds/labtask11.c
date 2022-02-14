@@ -109,7 +109,6 @@ void main(){
 
 
 #include<stdio.h>
-#include<conio.h>
 #include<string.h>
 #include<math.h>
 #include<stdlib.h>
@@ -119,16 +118,30 @@ void push(long int symbol);
 long int pop();
 void infix_to_postfix();
 int priority(char symbol);
-int isEmpty();
-int white_space(char);
+
 
 char infix[MAX], postfix[MAX];
 long int stack[MAX];
 int top;
 
+int isEmpty()
+{
+    if(top==-1)
+	    return 1;
+    else
+	    return 0;
+}
+
+int white_space(char symbol)
+{
+    if( symbol == ' ' || symbol == '\t' )
+	    return 1;
+    else
+	    return 0;
+}
+
 int main()
 {
- clrscr();
     top=-1;
     printf("Enter infix : ");
     gets(infix);
@@ -140,40 +153,41 @@ int main()
 
 void infix_to_postfix()
 {
-    unsigned int i,p=0;
+    int p=0;
     char next;
     char symbol;
-    for(i=0;i<strlen(infix);i++)
+    for(int i=0;i<strlen(infix);i++)
     {
-	symbol=infix[i];
-	if(!white_space(symbol))
-	{
-	    switch(symbol)
-	    {
-	    case '(':
-		push(symbol);
-		break;
-	    case ')':
-		while((next=pop())!='(')
-		    postfix[p++] = next;
-		break;
-	    case '+':
-	    case '-':
-	    case '*':
-	    case '/':
-	    case '%':
-	    case '^':
-		while( !isEmpty( ) &&  priority(stack[top])>= priority(symbol) )
-		    postfix[p++]=pop();
-		push(symbol);
-		break;
-	    default:
-		 postfix[p++]=symbol;
-	    }
-	}
+    	symbol=infix[i];
+    	if(!white_space(symbol))
+    	{
+    	    switch(symbol)
+    	    {
+    	    case '(':
+    		    push(symbol);
+    		    break;
+    	    case ')':
+        		while((next=pop())!='(')
+        		    postfix[p++] = next;
+        		break;
+    	    case '+':
+    	    case '-':
+    	    case '*':
+    	    case '/':
+    	    case '%':
+    	    case '^':
+        		while( !isEmpty( ) &&  priority(stack[top])>= priority(symbol) )
+        		    postfix[p++]=pop();
+        		push(symbol);
+        		break;
+    	    default:
+    		    postfix[p++]=symbol;
+    	    }
+    	}
     }
-    while(!isEmpty( ))
-	postfix[p++]=pop();
+    while(!isEmpty( )){
+	    postfix[p++]=pop();
+    }
     postfix[p]='\0';
 }
 
@@ -183,18 +197,18 @@ int priority(char symbol)
     switch(symbol)
     {
     case '(':
-	return 0;
+	    return 0;
     case '+':
     case '-':
-	return 1;
+	    return 1;
     case '*':
     case '/':
     case '%':
-	return 2;
+	    return 2;
     case '^':
-	return 3;
+	    return 3;
     default :
-	return 0;
+	    return 0;
     }
 }
 
@@ -202,10 +216,11 @@ void push(long int symbol)
 {
     if(top>MAX)
     {
-	printf("Stack overflow\n");
-	exit(1);
+    	printf("Stack overflow\n");
+    	exit(1);
     }
-    stack[++top]=symbol;
+    top +=1;
+    stack[top]=symbol;
 }
 
 long int pop()
@@ -217,18 +232,5 @@ long int pop()
     }
     return (stack[top--]);
 }
-int isEmpty()
-{
-    if(top==-1)
-	return 1;
-    else
-	return 0;
-}
 
-int white_space(char symbol)
-{
-    if( symbol == ' ' || symbol == '\t' )
-	return 1;
-    else
-	return 0;
-}
+
