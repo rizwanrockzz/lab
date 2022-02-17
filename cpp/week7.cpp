@@ -65,7 +65,7 @@ int main()
 
 
 // Task - 2
-// 2. Write a c++ program to demonstrate how constructors are invoked in Multilevel inheritance
+// 2. Write a c++ program to demonstrate how constructors are invoked in Multiple inheritance
 
 #include <iostream>
 using namespace std;
