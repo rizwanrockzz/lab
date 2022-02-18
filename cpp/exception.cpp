@@ -38,3 +38,40 @@ int main()
 
 
 
+//2b
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float a,b,c;
+    cout<<"Enter numerator and denominator (num den) : ";
+    cin>>a>>b;
+    
+    try{
+        
+        if(b == 0){
+            throw b;
+        }
+        else{
+            c = a/b;
+            cout<<"Divison of "<<a<<"/"<<b<<" is : "<<c<<endl;
+        }
+    }
+    
+    catch (float b) {
+        cout<<"The value is infinity"<<endl;
+	    cout<<"0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001";
+    }
+
+    return 0;
+}
+
+// Enter numerator and denominator (num den) : 10 0
+// 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+
+
+
+
+
