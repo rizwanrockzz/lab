@@ -73,6 +73,7 @@ int main()
 #include <deque>
 #include <iostream>
 using namespace std;
+// dequeu front
 
 int main()
 {
