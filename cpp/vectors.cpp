@@ -65,3 +65,27 @@ int main()
     return 0;
 }
 
+
+
+
+
+
+#include <deque>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	deque<int> mydeque;
+	mydeque.push_front(1);
+	mydeque.push_front(2);
+	mydeque.push_front(3);
+	mydeque.push_front(4);
+	mydeque.push_front(5);
+	mydeque.push_front(6);
+
+    for (auto it = mydeque.begin();it != mydeque.end(); ++it)
+        cout << ' ' << *it;
+
+	return 0;
+}
