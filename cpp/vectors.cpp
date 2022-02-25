@@ -71,19 +71,21 @@ int main()
 
 
 #include <deque>
+#include <algorithm>
 #include <iostream>
 using namespace std;
-// dequeu front
 
 int main()
 {
 	deque<int> mydeque;
+	mydeque.push_front(5);
+	mydeque.push_front(7);
+	mydeque.push_front(8);
+	mydeque.push_front(42);
 	mydeque.push_front(1);
 	mydeque.push_front(2);
-	mydeque.push_front(3);
-	mydeque.push_front(4);
-	mydeque.push_front(5);
-	mydeque.push_front(6);
+	
+	sort(mydeque.begin(), mydeque.end(), greater<int>());
 
     for (auto it = mydeque.begin();it != mydeque.end(); ++it)
         cout << ' ' << *it;
