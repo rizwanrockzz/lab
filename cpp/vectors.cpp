@@ -34,6 +34,7 @@ using namespace std;
 int main()
 {
     vector<int> a;
+    int id;
     a.push_back(10);
     a.push_back(4);
     a.push_back(7);
@@ -44,18 +45,18 @@ int main()
     int key,ans=0;
     cout<<"Enter key : ";
     cin>>key;
-    // sort(a.begin(),a.end());
     
-    for(auto i=a.begin();i!=a.end();i++){
-        // cout<<i<<" ";
-        if(*i==key){
+    for(int i=0;i<a.size();i++){
+        if(a[i]==key){
             ans = 1;
+            id = i;
+            
             break;
         }
     }
     
     if(ans){
-        cout<<"Element found";
+        cout<<"Element found at index "<<id;
     }
     else{
         cout<<"Element not found";
@@ -64,7 +65,6 @@ int main()
 
     return 0;
 }
-
 
 
 
