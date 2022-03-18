@@ -207,8 +207,7 @@ void infix_to_postfix()
     		    push(symbol);
     		    break;
     	    case ')':
-    	        next = pop();
-        		while(next!='(')
+    	        	while((next=pop())!='(')
         		    postfix[p++] = next;
         		break;
     	    case '+':
