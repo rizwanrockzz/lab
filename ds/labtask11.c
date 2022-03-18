@@ -108,6 +108,18 @@ void main(){
 // Postfix Expression : ABC*DEF^/G*-H*+
 
 
+// Task-2
+
+// In a class room we have discussed the algorithms for infix to postfix conversion.
+// Based on the same discussion implement a solution. Also run all the possible testcases. 
+// Testcase-1
+// Infix Expression : 3+4*5/6
+// Postfix Expression : 3 4 5 * 6 / +
+// Testcase-2
+// Infix Expression : A+(B*C-(D/E^F)*G)*H
+// Postfix Expression : ABC*DEF^/G*-H*+
+
+
 #include<stdio.h>
 #include<string.h>
 #include<math.h>
@@ -116,21 +128,11 @@ void main(){
 
 void push(long int symbol);
 long int pop();
-void infix_to_postfix();
-int priority(char symbol);
-
 
 char infix[MAX], postfix[MAX];
 long int stack[MAX];
 int top;
 
-int isEmpty()
-{
-    if(top==-1)
-	    return 1;
-    else
-	    return 0;
-}
 
 int white_space(char symbol)
 {
@@ -140,57 +142,13 @@ int white_space(char symbol)
 	    return 0;
 }
 
-int main()
+int isEmpty()
 {
-    top=-1;
-    printf("Enter infix : ");
-    gets(infix);
-    infix_to_postfix();
-    printf("Postfix : %s\n",postfix);
-    getch();
-    return 1;
+    if(top==-1)
+	    return 1;
+    else
+	    return 0;
 }
-
-void infix_to_postfix()
-{
-    int p=0;
-    char next;
-    char symbol;
-    for(int i=0;i<strlen(infix);i++)
-    {
-    	symbol=infix[i];
-    	if(!white_space(symbol))
-    	{
-    	    switch(symbol)
-    	    {
-    	    case '(':
-    		    push(symbol);
-    		    break;
-    	    case ')':
-        		while((next=pop())!='(')
-        		    postfix[p++] = next;
-        		break;
-    	    case '+':
-    	    case '-':
-    	    case '*':
-    	    case '/':
-    	    case '%':
-    	    case '^':
-        		while( !isEmpty( ) &&  priority(stack[top])>= priority(symbol) )
-        		    postfix[p++]=pop();
-        		push(symbol);
-        		break;
-    	    default:
-    		    postfix[p++]=symbol;
-    	    }
-    	}
-    }
-    while(!isEmpty( )){
-	    postfix[p++]=pop();
-    }
-    postfix[p]='\0';
-}
-
 
 int priority(char symbol)
 {
@@ -232,5 +190,60 @@ long int pop()
     }
     return (stack[top--]);
 }
+
+void infix_to_postfix()
+{
+    int p=0;
+    char next;
+    char symbol;
+    for(int i=0;i<strlen(infix);i++)
+    {
+    	symbol=infix[i];
+    	if(!white_space(symbol))
+    	{
+    	    switch(symbol)
+    	    {
+    	    case '(':
+    		    push(symbol);
+    		    break;
+    	    case ')':
+    	        next = pop();
+        		while(next!='(')
+        		    postfix[p++] = next;
+        		break;
+    	    case '+':
+    	    case '-':
+    	    case '*':
+    	    case '/':
+    	    case '%':
+    	    case '^':
+        		while( !isEmpty( ) &&  priority(stack[top])>= priority(symbol) )
+        		    postfix[p++]=pop();
+        		push(symbol);
+        		break;
+    	    default:
+    		    postfix[p++]=symbol;
+    	    }
+    	}
+    }
+    while(!isEmpty( )){
+	    postfix[p++]=pop();
+    }
+    postfix[p]='\0';
+}
+
+
+int main()
+{
+    top=-1;
+    printf("Enter infix : ");
+    gets(infix);
+    infix_to_postfix();
+    printf("Postfix : %s\n",postfix);
+    
+    return 0;
+}
+
+
 
 
