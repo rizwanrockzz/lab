@@ -1,0 +1,163 @@
+features
+limitations
+open source / commercial
+developed company
+version
+usage of software
+applications
+security
+supported os
+developed year
+- data model (Hierarchical model, Network model, Entity-relationship model, Relational model)
+research area
+
+
+
+2.MySQL
+
+
+- top in  robust transactional database
+features such as complete atomic, consistent, isolated, durable transaction support; multi-version transaction support; and unrestricted row-level locking
+
+- MySQL has hard limit of 4096 columns per table, but the effective maximum may be less for a given table
+- open-source 
+- Developer(s): Oracle Corporation
+- Stable release: 8.0.28 / 18 January 2022; 2 months ago
+- The application is used for a wide range of purposes, including data warehousing, e-commerce, and logging applications,web database
+
+- Airbnb.
+Shopify.
+Netflix.
+Pinterest.
+Amazon.
+Udemy.
+
+- fine-grained authorization and controls, and data encryption.
+
+
+- Operating system: Linux, Solaris, macOS, Windows, FreeBSD
+- Initial release: 23 May 1995; 26 years ago
+
+- Relational model
+
+
+
+
+
+
+
+
+
+
+
+
+
+1 .PostgreSQL
+
+- User-defined types,
+Table inheritance
+- coloums per table 1600
+- open source
+- PostgreSQL Global Development Group
+- version is 14
+- primary data store for many web, mobile, geospatial, and analytics applications,highly secure & advanced
+- Uber
+Netflix
+Instagram
+Spotify
+
+-  Network-level security including  Unix Domain sockets, TCP/IP sockets, and firewalls. SSL/TLS
+-  macOS, Windows, Linux, FreeBSD, OpenBSD
+-  8 July 1996; 25 years ago
+-  The data model is a relational model that has been extended with abstract data types
+- financial data analysis 
+ a jet engine performance monitoring package,   asteroid tracking database   medical information database
+ geographic information system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Amazon RDS
+Oracle RDBMS
+Razor SQL
+Microsoft Access
+SQL Developer
+Informix
+IBM DB2
+Teradata
+SQLite
+
+
+
+
+
+
+Microsoft SQL Server
+
+- transaction processing, business intelligence, analytics applications
+- Expensive,Complex performance tuning features
+- commercial
+- Microsoft
+- Microsoft SQL Server 2019,RTM version is 15.0
+- 
+- Bank of America,DELL
+- encrypted communication over SSL/TLS, the Windows Data Protection API (DPAPI)
+- Operating system: Linux, Microsoft Windows Server, Microsoft Windows
+- April 24, 1989; 32 years ago, as SQL Server 1.0
+- model database
+- The technology industry 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
