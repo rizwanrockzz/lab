@@ -2,27 +2,35 @@ package javalabrizwan99;
 
 import java.util.Scanner;
 
-
-public class maxminnumber {
+public class caluclatormenu {
     public static void main(String args[]){
-       int n,min=10,max=-1;
-       Scanner sc = new Scanner(System.in);
-       System.out.println("Enter a number : ");
-       n = sc.nextInt();
-       
-       while(n!=0){
-           int rem = n%10;
-           if(rem>max){
-               max = rem;
-           }
-           if(rem<min){
-               min = rem;
-           }
-           n = n/10;
-       }
-       
-       System.out.println("Maximum number is : "+max);
-       System.out.println("Minimum number is : "+min);
-       
+        int a,b;
+        char key;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter a : ");
+        a = sc.nextInt();
+        System.out.print("Enter b : ");
+        b = sc.nextInt();
+        System.out.print("Enter your operation (Eg : +,-,*,/) : ");
+        key = sc.next().charAt(0);
+        
+        switch(key){
+            case '+':
+                System.out.println(a+b);
+                break;
+            case '-':
+                System.out.println(a-b);
+                break;
+            case '*':
+                System.out.println(a*b);
+                break;
+            case '/':
+                System.out.println(a/b);  
+                break;
+            default:
+                System.out.println("Enter a valid symbol");  
+        }
+        
     }
 }
