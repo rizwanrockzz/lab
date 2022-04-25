@@ -25,11 +25,11 @@ public class evenodd {
             }
         }
         System.out.println();
-        for(i=0;i<even.length;i++){
+        for(i=0;i<ev;i++){
             System.out.print(even[i]+" ");
         }
         System.out.println();
-        for(i=0;i<odd.length;i++){
+        for(i=0;i<od;i++){
             System.out.print(odd[i]+" ");
         }
         System.out.println();
@@ -42,8 +42,8 @@ public class evenodd {
 // Enter array elements : 
 // 1 2 3 4 5
 
-// 2 4 0 0 0 
-// 1 3 5 0 0 
+// 2 4 
+// 1 3 5  
 
 
 
