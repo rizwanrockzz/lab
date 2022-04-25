@@ -10,3 +10,7 @@ public class array1d {
         System.out.println();
     }
 }
+
+// OUTPUT
+
+// Given Array : 10 20 30 40 50 
