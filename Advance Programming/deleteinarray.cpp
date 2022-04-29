@@ -37,11 +37,17 @@ int deleteElement(int arr[], int n, int x)
 
 int main()
 {
-    int arr[] = {11,3,1,5,12,14,18,7};
+    // int arr[] = {11,3,1,5,12,14,18,7}; 11 3 1 5 12 14 18 7
+    int arr[10];
     int pr[10],j=0;
     int n,t;
     cout<<"Enter the no of elements : ";
     cin>>n;
+    
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    
     for(int i=0;i<n;i++){
         if(prime(arr[i])){
             pr[j]=arr[i];
@@ -62,4 +68,8 @@ int main()
 }
 
 
+// OUTPUT
 
+// Enter the no of elements : 8
+// 11 3 1 5 12 14 18 7
+// Modified Array is : 1 12 14 18 
