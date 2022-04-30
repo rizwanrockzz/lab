@@ -1,3 +1,46 @@
+#  Create a function to calculate the average, median and mean for a numeric vector age in employee database
+
+install.packages("RMySQL")
+library(RMySQL)
+
+
+mydb = dbConnect(MySQL(), user='root', password='', dbname='employee', host='localhost')
+mydb
+dbListTables(mydb)
+dbListFields(mydb, 'info')
+rs = dbSendQuery(mydb, "select age from info")
+rs
+print(rs)
+data = fetch(rs, n=-1)
+data
+
+getStat <- function(age){
+  age = sort(age)
+  l = length(age)
+  s = sum(age)
+  print(l)
+  print(s)
+  print(age)
+  print(class(age))
+  print(paste("Mean is : ",s/l))
+  print(paste("Average is : ",s/l))
+  if(l%%2==0){
+    
+    med = age[l/2]+age[(l/2)+1]
+    print(paste("Median is : ",med/2))
+    
+  }
+  else{
+    print(paste("Median is : ",data[l/2]))
+  }
+}
+
+
+getStat(data$age)
+summary(data)
+
+
+
 
 
 
@@ -42,6 +85,8 @@ countEmpolyees
 
 
 
+
+
 # 3.Create two vectors that stores the details of name and gender of the employees. Find how many 'male' and 'female' 
 # employees are present?
 
@@ -77,9 +122,11 @@ theDF2
 
 
 
+
+
 # Write R code to define the function by using if-else
 #   F(x)=x 	if x<1/2
-# ``=(1-x)	if ½<x<1
+# ``=(1-x)	if Â½<x<1
 # ``=0 	otherwise
 
 sample_func = function(x){
