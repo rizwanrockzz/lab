@@ -1,0 +1,6 @@
+net user
+
+net user (username) (password) /add
+
+net user (username) /delete
+
