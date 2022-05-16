@@ -22,6 +22,10 @@ class EmployeeSal{
         System.out.println("Employee pincode is : "+pincode);
         
     }
+    
+    void salaryIncrement(){
+        salary = salary+1000;
+    }
 }
 
 public class Employee {
@@ -29,14 +33,27 @@ public class Employee {
        EmployeeSal es = new EmployeeSal();
        es.setFields(299, 520007,"rizwan", "vijayawada", 1000000);
        es.display();
+       es.salaryIncrement();
+       System.out.println();
+       System.out.println();
+       es.display();
     }
 }
 
 
-// output :
+
+
+// OUTPUT
 
 // Employee number is : 299
 // Employee name is : rizwan
 // Employee Salary is : 1000000
+// Employee city is : vijayawada
+// Employee pincode is : 520007
+
+
+// Employee number is : 299
+// Employee name is : rizwan
+// Employee Salary is : 1001000
 // Employee city is : vijayawada
 // Employee pincode is : 520007
