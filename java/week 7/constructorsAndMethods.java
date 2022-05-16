@@ -49,3 +49,10 @@ public class constructorsAndMethods {
         emp.display();
     }
 }
+
+
+// output
+
+// Sno is : 4
+// sname is : rizwan rockzz
+// smarks is : 94
