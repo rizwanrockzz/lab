@@ -1,0 +1,70 @@
+create table student (sno int(100),name varchar(30),roll varchar(10),sem varchar(5),cgpa float);
+
+-- student table 
+
+ insert into student values(1,"ram","208w1A1201","2-2",8.57);
+ 
+ insert into student values(2,"ravi","208w1A1202","2-2",8.90);
+ 
+ insert into student values(2,"ravi","208w1A1202","2-2",8.90);
+ 
+ insert into student values(4,"sita","208w1A1204","2-2",9.02);
+ 
+ insert into student values(5,"shella","208w1A1205","2-2",7.4);
+ 
+ insert into student values(6,"satya","208w1A1206","2-2",8.0);
+ 
+ insert into student values(7,"ram","208w1A1207","2-2",8.4);
+ 
+ insert into student values(8,"gopal","208w1A1208","2-2",9.0);
+ 
+ insert into student values(9,"varma","208w1A1209","2-2",8.1);
+ 
+ insert into student values(10,"surma","208w1A1210","2-2",9.19);
+ 
+ -- creating view
+ 
+ create view rizwanview as select name,roll from student where sno>5;
+ 
+ create table studentmarks (sno int(100),name varchar(30),marks float);
+ 
+ 
+--- studentmarks table
+ 
+ 
+insert into studentmarks values(1,"ram",90);
+
+insert into studentmarks values(2,"shyam",82);
+
+insert into studentmarks values(3,"surma",99);
+
+insert into studentmarks values(4,"ravi",94);
+
+insert into studentmarks values(5,"varma",75);
+
+
+-- creating view
+
+create view marksview as select student.name,student.roll,studentmarks.marks from student,studentmarks where student.name=studentmarks.name;
+
+-- updating view
+
+create or replace view marksview as select student.sno,student.name,student.roll,studentmarks.marks from student,studentmarks where student.name=studentmarks.name;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
