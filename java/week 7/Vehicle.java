@@ -1,3 +1,8 @@
+// 4. Create a class Vehicle with the fileds vno,vprice,model_name, price. Use
+// a. overloaded methods or
+// b. overloaded constructors to set values
+// Print the information using a show() method
+
 package pkg208w1a1299;
 
 public class Vehicle {
