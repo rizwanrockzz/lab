@@ -1,3 +1,10 @@
+// 1. Create a class with fileds sno, sname,smarks. Set the values to these fields with
+// a. Default method or
+// b. Parameterised method or
+// c. Default Consrucor or
+// d. Parameterised constructor
+
+
 package rizwanjava;
 
 class Employee{
