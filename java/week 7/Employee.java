@@ -1,3 +1,7 @@
+// 2. Create a class Employee withe fileds eno, ename, sal, city,pincode. 
+// Set the values using parameterised method. create another method to update the sal by Rs.1000. 
+// Print the information of employee before and after the update salary
+
 package rizwanjava;
 
 class EmployeeSal{
