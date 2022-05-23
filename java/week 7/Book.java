@@ -1,3 +1,6 @@
+// 3. Create a class Book with fields bno, bname, price, no_of_pages. 
+// Set the values using Parameterised constructor and then create a method to give discount of Rs. 100 and print the information before and after discount
+
 package rizwanjava;
 
 //bno, bname, price, no_of_pages
