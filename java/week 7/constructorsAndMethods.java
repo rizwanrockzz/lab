@@ -3,7 +3,7 @@
 // b. Parameterised method or
 // c. Default Consrucor or
 // d. Parameterised constructor
-
+// Display the information using display() method
 
 package rizwanjava;
 
