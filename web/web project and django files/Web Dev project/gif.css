@@ -1,0 +1,11 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background: rgba(128, 128, 128, 0.575);
+}
+
+img{
+    width: 100px;
+}
