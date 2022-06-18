@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@500&family=Montserrat&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* ::selection {
+  color: #000;
+  background: #fff;
+} */
+
+/* Header Starts */
+
+.theme-color {
+  color: green;
+}
+
+.main-logo{
+  width: 170px;
+}
+
+header {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 6%;
+  font-size: 1.2rem;
+  background: #8080802d;
+}
+
+li,
+a,
+button {
+  text-decoration: none;
+  color: black;
+}
+
+a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: green;
+  padding-bottom: 5px;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::before {
+  transform: scaleX(1);
+}
+
+.logo {
+  cursor: pointer;
+  font-family: "Lemonada", cursive;
+  /* color: green; */
+  background: linear-gradient(to right, #ff0080, #40e0d0, #ff8c00);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  /* font-size: bold; */
+  font-weight: bolder;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.nav-links li a:hover {
+  color: green;
+}
+
+button {
+  padding: 9px 25px;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  background-color: rgb(14, 204, 14);
+  color: white;
+}
+
+/* Header ends */
+
+.grid-wrapper {
+  display: grid;
+  column-gap: 10px;
+  row-gap: 20px;
+  grid-template-columns: auto auto auto;
+  background-color: #8080802d;
+  padding: 10px;
+  justify-items: center;
+}
+
+.grid-banner {
+  margin: 20px 8%;
+  display: grid;
+  column-gap: 60px;
+  row-gap: 60px;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.menu-item {
+  width: 310px;
+  background: #fff;
+  margin: 15px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+.menu-item .put-down {
+  margin-top: 40px;
+  margin-bottom: 22px;
+}
+
+.menu-item .put-down-2 {
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.menu-item .put-down-3 {
+  margin-top: 30px;
+}
+
+.menu-item .item-name {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+
+.menu-item .item-cost {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.menu-item img {
+  width: 290px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-item button {
+  color: #fff;
+  background: #192a56;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+  padding: 5px 15px;
+  font-size: 15px;
+  margin: 8px 0 8px 30px;
+}
+
+.stars {
+  padding: 5px 0 10px 0;
+  text-align: center;
+}
+
+.stars i {
+  font-size: 20px;
+  color: green;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.sub-heading {
+  text-align: center;
+  color: green;
+  font-size: 2rem;
+  /* padding-top: 1rem; */
+}
+
+/* .center {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+} */
+
+.wrap .animate {
+  color: green;
+}
+
+.tag {
+  padding-left: 20px;
+  padding-bottom: 15px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.typing {
+  /* text-align: center; */
+  padding-left: 20px;
+}
+
+.wrap-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 20px;
+  padding: 10px;
+  justify-items: center;
+  align-items: center;
+  height: 86vh;
+}
+
+.wrap-banner img {
+  width: 550px;
+}
+
+/* App Data Section */
+
+.app-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 60px;
+  justify-items: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.app-data div:nth-child(2) {
+  text-align: center;
+  margin-right: 15%;
+}
+
+.app-data .app-heading {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.app-data .app-subheading {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.app-data img {
+  width: 410px;
+}
+
+.app-data .google-apple {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  column-gap: 45px;
+}
+
+.app-data .google-apple img {
+  width: 175px;
+}
+
+/* Numers Section */
+
+.numbers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  column-gap: 16%;
+  margin: 4% 0;
+}
+
+.numbers h2 {
+  font-size: 33px;
+  color: green;
+}
+
+.numbers p {
+  text-align: center;
+  font-weight: 500;
+}
+
+/* About Us */
+
+.about-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-self: center;
+  align-items: center;
+  column-gap: 5%;
+  margin: 30px 6%;
+}
+
+.about-us h3 {
+  color: green;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.about-us h2 {
+  font-size: 32px;
+}
+
+.about-us p {
+  text-align: start;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.about-img {
+  width: 500px;
+}
+
+/* FOOTER */
+
+.footer {
+  background: black;
+  color: white;
+  padding: 2rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 10px 10%;
+}
+
+.heading-foot {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.col a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  padding: 5px 0;
+}
+
+.end-line {
+  display: flex;
+  justify-content: space-around;
+  background: black;
+  color: white;
+  padding: 3rem;
+}
+
+.logo {
+  text-transform: uppercase;
+  /* font-weight: bold; */
+  font-size: 1.8rem;
+}
+
+.copy {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.social i {
+  font-size: 1.5rem;
+  padding: 0 20px;
+  color: white;
+}
+
+.centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-facebook-f:hover {
+  color: #3a559f;
+}
+
+.fa-instagram:hover {
+  color: red;
+}
+
+.fa-linkedin:hover {
+  color: #0274b3;
+}
+
+.fa-twitter:hover {
+  color: #01a2ed;
+}

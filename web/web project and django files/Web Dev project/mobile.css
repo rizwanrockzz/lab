@@ -1,0 +1,53 @@
+@media only screen and (max-width: 450px) {
+  .wrap-banner {
+    grid-template-columns: auto;
+  }
+
+  .typing {
+    font-size: 31px;
+  }
+
+  .grid-wrapper {
+    grid-template-columns: auto;
+    width: 440px;
+  }
+
+  .grid-banner {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .menu-item {
+    width: 360px;
+  }
+
+  .app-data {
+    grid-template-columns: 1fr;
+  }
+
+  .numbers {
+    grid-template-columns: auto;
+  }
+
+  .about-us {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-banner {
+    grid-template-columns: auto;
+  }
+
+  .about-img {
+    width: 390px;
+  }
+
+  .wrap-banner img {
+    width: 400px;
+  }
+
+  .app-data .google-apple {
+    grid-template-columns: auto;
+    /* column-gap: 48px; */
+    row-gap: 30px;
+  }
+}
