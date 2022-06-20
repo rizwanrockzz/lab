@@ -1,3 +1,21 @@
+// Create a class named Employee with the following details
+//  Data members:
+// (a)	name (b) address (c) age (d) gender
+// Methods :
+// 	(a ) Display () to show the employee details
+// Create another class FullTimeEmployee that inherits the Employee class :
+// 	Data members :
+// (a)	Salary	Designation
+// Method :
+// (a)	Display () to show the salary and designation along  with other employee details.
+// Create another class PartTimeEmployee that inherits the Employee class :
+// 	Data members :
+// (a)	Workinghours	rateperhour
+// Methods :
+// (a)	caluculatepay() to caluculate the amount payable
+// (b)	display() to show the amount payable along with the employee details.
+
+
 package pkg208w1a1299;
 
 class Employee{
