@@ -1,3 +1,7 @@
+// Create a class Q with a variable q and consider default constructor for setting to q. Create a subclass R with a variable r and consider 
+// default constructor for setting to r. Create a subclass to R as S with a variable s and consider a default constructor for setting for s. 
+// Create a display function in each of the classes. Create a main method to call the functions
+
 package pkg208w1a1299.inheritance;
 
 class Q{
