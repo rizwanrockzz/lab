@@ -1,3 +1,7 @@
+// Create a class person with the filed firstname, lastname. Use parameterized method to set the values to the variables at runtime. 
+// Create sub class Employee with the variable eno, edept, esal. 
+// Create parameterized method for setting the data and default method for display the information.
+
 package pkg208w1a1299.inheritance;
 
 class Person{
