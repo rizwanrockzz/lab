@@ -28,3 +28,10 @@ public class que1 {
         b.display();
     }
 }
+
+
+// OUTPUT
+
+// x : 10
+// y : 20
+// z : 30
