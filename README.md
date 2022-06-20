@@ -15,3 +15,5 @@ JAVA, R, DBMS, DS, CPP lab programs and Web Development lab websites by #RIZWAN#
 [WEEK 6](https://github.com/rizwanrockzz/lab/tree/main/java/week%206)
 
 [WEEK 7](https://github.com/rizwanrockzz/lab/tree/main/java/week%207)
+
+[WEEK 8](https://github.com/rizwanrockzz/lab/tree/main/java/week%208)
