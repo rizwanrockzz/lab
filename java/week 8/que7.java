@@ -41,7 +41,7 @@ class Student extends Persons{
 }
 
 class grade extends Student{  
-    float average ;
+   float average ;
     
     void printGrade(){
         
@@ -64,13 +64,14 @@ class grade extends Student{
     } 
 }
 
-public class que7 {
+public class Main {
     public static void main(String args[]){
-        Persons ps = new Persons();
-        Student st = new Student();
+        // Persons ps = new Persons();
+        // Student st = new Student();
         grade gd = new grade();
-        ps.getData(123456789, "mr x");
-        st.setData(1,70,80,90,"IT");
+        gd.getData(123456789, "mr x");
+        gd.setData(1,70,80,90,"IT");
+        // gd.average();
         gd.printGrade();
     }
 }
