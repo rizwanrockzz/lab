@@ -152,6 +152,39 @@ int main()
 
 
 
+// right solution
 
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	vector<string> strs = { "cat", "dog", "tac", "god", "act" };
+	
+   unordered_map<string,vector<string> > mymap;
+    int n = strs.size();
+    string temp;
+    
+    for(int i =0;i<n;++i)
+    {
+        temp = strs[i];
+        sort(strs[i].begin(),strs[i].end());
+        mymap[strs[i]].push_back(temp);
+    }
+    
+    vector<vector<string> > result;
+    
+    for(auto itr=mymap.begin();itr!=mymap.end();++itr)
+        result.push_back(itr->second);
+            
+    for (int i =0;i<n;i++){
+        for (int j=0;j<result[i].size();j++){
+        cout<<result[i][j]<<" ";
+        }
+        cout << endl;
+    }
+
+	return 0;
+}
 
 
