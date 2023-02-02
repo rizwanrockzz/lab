@@ -1,0 +1,13 @@
+git init
+
+git remote add origin https://github.com/<username>/<repo-name>.git
+
+git add .
+
+git checkout <branch-name>
+
+git merge origin/<branch-name> --allow-unrelated-histories
+
+git commit -m "Merged branch <branch-name>"
+
+git push origin <branch-name>
