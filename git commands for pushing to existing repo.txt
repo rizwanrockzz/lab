@@ -23,3 +23,13 @@ git checkout main
 git merge origin/main --allow-unrelated-histories
 git commit -m "Merged branch main"
 git push -u origin main
+
+
+
+## Pushing to our repo who's git file is deleted by mistake
+
+git init
+git add origin //origin-url-here
+git pull 
+git checkout main
+git add,commit & push
